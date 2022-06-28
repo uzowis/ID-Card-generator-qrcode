@@ -1,0 +1,141 @@
+
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-12 col-xl-4 col-md-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">My Profile</h3>
+                                   
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <div class="userprofile">
+                                            <div class="userpic brround"><img src="<?php echo '../photos/'.$fetch['passport']?>" style="width:100px; height:auto;" alt="" class="img img-circle" /></div>
+                                            <h3 class="username mb-2"><?php echo $fetch['fname']." ".$fetch['lname'];?></h3>
+                                            <p class="mb-1"><?php echo $fetch['position'];?></p>
+                                            <div class="text-center mb-4">
+                                                <span><i class="fa fa-star text-warning"></i></span> <span><i class="fa fa-star text-warning"></i></span> <span><i class="fa fa-star text-warning"></i></span>
+                                                <span><i class="fa fa-star-half-o text-warning"></i></span> <span><i class="fa fa-star-o text-warning"></i></span>
+                                            </div>
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                            
+                        </div>
+                        <div class="col-lg-12 col-xl-8 col-md-12 col-sm-12">
+                            <div class="card">
+                                <div class="card-header"><h3 class="card-title">Edit Profile</h3></div>
+                                <div class="card-body">
+								<p class="text-success"> <?php echo $success;?></p>
+								<form action="" method="POST" enctype="multipart/form-data">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group"><label for="exampleInputname">First Name</label> <input name="fname" type="text" class="form-control" id="exampleInputname" placeholder="First Name"  value="<?php echo $fetch['fname'];?>" disabled/></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group"><label for="exampleInputname1">Last Name</label> <input name="lname" type="text" class="form-control" id="exampleInputname1" placeholder="Enter Last Name" value="<?php echo $fetch['lname'];?>"  disabled/></div>
+                                        </div>
+                                    </div>
+									 <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group"><label for="exampleInputname">Email</label> <input  type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="email address" value="<?php echo $fetch['email'];?>" disabled/></div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-12">
+                                            <div class="form-group"><label for="exampleInputname1">Username</label> <input type="text" name="username" class="form-control" id="exampleInputname1" placeholder="Username" value="<?php echo $fetch['username'];?>" disabled/></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group"><label for="exampleInputnumber">National ID/Passport No.</label> <input  type="text" class="form-control" id="exampleInputnumber" name="n_id" placeholder="ID Number" value="<?php echo $fetch['n_id'];?>" /></div>
+                                    <div class="form-group"><label for="exampleInputnumber">Staff ID</label> <input  type="text" class="form-control" id="exampleInputnumber" name="user_id" placeholder="Staff ID" value="<?php echo $fetch['user_id'];?>" disabled/></div>
+                                    <div class="form-group"><label for="exampleInputnumber">Mobile Number</label> <input  type="text" class="form-control" id="exampleInputnumber" name="phone" placeholder="Mobile Number" value="<?php echo $fetch['phone'];?>" /></div>
+                                    <div class="form-group"><label for="exampleInputnumber">Division/LGA</label> <input type="text" class="form-control" id="exampleInputnumber" name="division" placeholder="Division" value="<?php echo $fetch['division']; ?>" /></div>
+                                    <div class="form-group"><label for="exampleInputnumber">Position</label> <input type="text" class="form-control" id="exampleInputnumber" name="position" placeholder="Position" value="<?php echo $fetch['position'];?>" /></div>
+									<div class="form-group ">
+									<label for="exampleInputnumber">Command</label>
+										<select class="form-control" id="command" name="command">
+											<option disabled="" selected=""><?php echo $fetch['command'];?></option>
+											<option value="Abia">Abia</option>
+											<option value="Adamawa">Adamawa</option>
+											<option value="Akwa Ibom">Akwa Ibom</option>
+											<option value="Anambra">Anambra</option>
+											<option value="Bauchi">Bauchi</option>
+											<option value="Bayelsa">Bayelsa</option>
+											<option value="Benue">Benue</option>
+											<option value="Borno">Borno</option>
+											<option value="Cross Rive">Cross River</option>
+											<option value="Delta">Delta</option>
+											<option value="Ebonyi">Ebonyi</option>
+											<option value="Edo">Edo</option>
+											<option value="Ekiti">Ekiti</option>
+											<option value="Enugu">Enugu</option>
+											<option value="FCT">Federal Capital Territory</option>
+											<option value="Gombe">Gombe</option>
+											<option value="Imo">Imo</option>
+											<option value="Jigawa">Jigawa</option>
+											<option value="Kaduna">Kaduna</option>
+											<option value="Kano">Kano</option>
+											<option value="Katsina">Katsina</option>
+											<option value="Kebbi">Kebbi</option>
+											<option value="Kogi">Kogi</option>
+											<option value="Kwara">Kwara</option>
+											<option value="Lagos">Lagos</option>
+											<option value="Nasarawa">Nasarawa</option>
+											<option value="Niger">Niger</option>
+											<option value="Ogun">Ogun</option>
+											<option value="Ondo">Ondo</option>
+											<option value="Osun">Osun</option>
+											<option value="Oyo">Oyo</option>
+											<option value="Plateau">Plateau</option>
+											<option value="Rivers">Rivers</option>
+											<option value="Sokoto">Sokoto</option>
+											<option value="Taraba">Taraba</option>
+											<option value="Yobe">Yobe</option>
+											<option value="Zamfara">Zamfara</option>
+										</select>
+									  </div>
+                                    
+                                    <div class="form-group mb-0 mt-5">
+                                        <div class="row">
+                                            <div class="col-xl-6 col-lg-12 col-md-12 userprofile">
+                                                <p>Change Photograph:</p>
+												<div class="custom-file mb-3">
+												  <input type="file" class="custom-file-input" id="customFile" name="passport">
+												  <label class="custom-file-label" for="customFile">Choose file</label>
+												  <p class="text-danger"> <?php echo $fileSizeError_photo.$fileTypeError_photo;?></p>
+												</div>
+												<p>Change Signature:</p>
+												<div class="custom-file mb-3">
+												  <input type="file" class="custom-file-input"  id="customFile" name="sign">
+												  <label class="custom-file-label" for="customFile">Choose file</label>
+												  <p class="text-danger"> <?php echo $fileSizeError_sign.$fileTypeError_sign;?></p>
+												</div>
+												 <input type="submit" class="btn btn-primary btn-md mt-3 text-center" name="upload" value="Change Image">
+                                            </div>
+                                            <div class="col-xl-6 col-lg-12 col-md-12">
+                                                <div class="form-group"><label>Change Password</label> <input type="password" class="form-control"  name="old_pwd"/></div>
+                                                <p class="text-danger"> <?php echo $error_pwd_change;?></p>
+												<div class="form-group"><label>New Password</label> <input type="password" class="form-control"  name="new_pwd"/></div>
+                                                <div class="form-group mb-0"><label>Confirm Password</label> <input type="password" class="form-control" name="cpwd" /></div>
+												<p class="text-danger"> <?php echo $error_pwd;?></p>
+											</div>
+                                        </div>
+                                    </div>
+								
+                                </div>
+                                <div class="card-footer text-right">
+                                    <input type="submit" class="btn btn-success btn-md mt-3" name="update" value="Update">
+                                </div>
+							</form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row end -->
+                </div>
+                <!-- Right-sidebar-->
+                <!-- End Rightsidebar-->
+                <!--footer-->
+               
+             
+</body>
